@@ -1,0 +1,157 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: #1e1e2f;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+    color: #1c5ce7;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #1e1e2f, #222);
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px 100px;
+}
+
+#hero h2 {
+    color: #fff;
+}
+
+#hero .highlight {
+    color: #1c5ce7;
+}
+#hero .btn {
+    background: #1c5ce7;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+#hero .btn:hover {
+    background: #ffffff;
+    color: #1c5ce7;
+}
+
+/* Section Titles */
+section h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5rem;
+    color: #1e1e2f;
+}
+
+/* Portfolio Section */
+#portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+#portfolio .card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+#portfolio .card:hover {
+    transform: scale(1.05);
+}
+#portfolio .card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px;
+}
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+#contact form input:focus, #contact form textarea:focus {
+    border-color: #1c5ce7;
+}
+#contact form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #1c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#contact form button:hover {
+    background: #ffffff;
+    color: #1c5ce7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
