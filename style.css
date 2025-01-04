@@ -222,3 +222,41 @@ footer {
     color: #1c5ce7 !important;
     border: 2px solid #1c5ce7;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .comcard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comcard {
+        flex-direction: column;
+        text-align: center;
+        min-width: unset; /* Remove rigid width */
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .comcard-img {
+        margin: 0 auto 15px; /* Center the image and add bottom margin */
+        width: 120px; /* Reduce image size */
+        height: 120px;
+    }
+
+    .comcard-content {
+        text-align: center; /* Center-align text on small screens */
+    }
+
+    .comcard-social-links ul {
+        padding: 0;
+    }
+
+    .comcard-social-links li {
+        margin-bottom: 10px;
+    }
+
+    .comcard-social-links a {
+        font-size: 0.9rem; /* Adjust font size for better scaling */
+    }
+}
