@@ -23,6 +23,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -31,27 +32,94 @@ header .container {
     margin: auto;
     padding: 0 20px;
 }
+
 header h1 a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 header nav ul {
     list-style: none;
     display: flex;
 }
+
 header nav ul li {
     margin-left: 20px;
 }
+
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
+
 header nav ul li a:hover {
     color: #1c5ce7;
+}
+
+.comcard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comcard {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 540px;
+}
+
+.comcard-img {
+    border-radius: 50%;
+    border: 3px solid #1c5ce7;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    margin-right: 35px;
+}
+
+.comcard-content {
+    text-align: left;
+}
+
+.comcard h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+.comcard p {
+    color: #666;
+}
+
+.comcard-social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comcard-social-links li {
+    margin-bottom: 10px;
+}
+
+.comcard-social-links a {
+    color: #1c5ce7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.comcard-social-links a:hover {
+    color: #333;
+}
+
+.comcard-social-links i {
+    margin-right: 8px;
 }
 
 /* Hero Section */
@@ -59,7 +127,7 @@ header nav ul li a:hover {
     background: linear-gradient(to right, #1e1e2f, #222);
     color: #fff;
     text-align: center;
-    padding: 150px 20px 100px;
+    padding: 100px 20px 50px;
 }
 
 #hero h2 {
@@ -69,6 +137,7 @@ header nav ul li a:hover {
 #hero .highlight {
     color: #1c5ce7;
 }
+
 #hero .btn {
     background: #1c5ce7;
     color: #fff;
@@ -79,9 +148,14 @@ header nav ul li a:hover {
     border-radius: 5px;
     transition: background 0.3s ease;
 }
+
 #hero .btn:hover {
     background: #ffffff;
     color: #1c5ce7;
+}
+
+.hero-content p{
+    margin-bottom: 20px;
 }
 
 /* Section Titles */
@@ -101,6 +175,7 @@ section h2 {
     margin: auto;
     padding: 0 20px;
 }
+
 #portfolio .card {
     background: #fff;
     padding: 20px;
@@ -108,54 +183,42 @@ section h2 {
     text-align: center;
     transition: transform 0.3s ease;
 }
+
 #portfolio .card a, #portfolio .card a:visited {
     color: black;
     text-decoration: none;
 }
+
 #portfolio .card:hover {
     transform: scale(1.05);
 }
+
 #portfolio .card img {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-/* Contact Section */
-#contact form {
-    max-width: 600px;
-    margin: auto;
-    padding: 0 20px;
-}
-#contact form input, #contact form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-#contact form input:focus, #contact form textarea:focus {
-    border-color: #1c5ce7;
-}
-#contact form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #1c5ce7;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-#contact form button:hover {
-    background: #ffffff;
-    color: #1c5ce7;
-}
-
 /* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
+}
+
+.btn {
+    display: block;
+    background-color: #1c5ce7;
+    color: #fff !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #1c5ce7 !important;
+    border: 2px solid #1c5ce7;
 }
