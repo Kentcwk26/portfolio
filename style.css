@@ -27,16 +27,16 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 540px;
+    min-width: 500px;
 }
 
 .comcard-img {
     border-radius: 50%;
     border: 3px solid #1c5ce7;
     padding: 5px;
-    width: 150px;
-    height: 150px;
-    margin-right: 35px;
+    width: 180px;
+    height: 180px;
+    margin-right: 30px;
 }
 
 .comcard-content {
@@ -314,14 +314,6 @@ footer {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .resume-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-
 /* Initial hidden state */
 .hidden {
     opacity: 0;
@@ -345,8 +337,7 @@ footer {
     .comcard {
         flex-direction: column;
         text-align: center;
-        min-width: unset; /* Remove rigid width */
-        width: 90%; /* Adjust width for smaller screens */
+        min-width: 150%;
         padding: 15px; /* Adjust padding for smaller screens */
     }
 
@@ -370,5 +361,10 @@ footer {
 
     .comcard-social-links a {
         font-size: 0.9rem; /* Adjust font size for better scaling */
+    }
+
+    .resume-button {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
