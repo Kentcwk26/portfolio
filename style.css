@@ -242,6 +242,11 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.card p {
+    text-align: justify;
+    padding: 10px 0;
+}
+
 /* Footer */
 footer {
     text-align: center;

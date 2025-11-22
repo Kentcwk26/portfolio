@@ -76,20 +76,27 @@ function isLeapYear(year) {
 function updateProgressValues() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    
+
     // Get current day of the year
     const currentDayOfYear = getDayOfYear(currentDate);
-    
+
     // Get total days in the year (365 or 366 for leap years)
     const totalDays = isLeapYear(currentYear) ? 366 : 365;
-    
+
     // Calculate the negative countdown (e.g., -365, -364, ..., -1)
     const negativeCountdown = -(totalDays - currentDayOfYear);
 
-    // Update the progress bar values
+    // Update displayed values
     document.getElementById("current-day").innerText = currentDayOfYear.toFixed(2);
     document.getElementById("total-days").innerText = negativeCountdown.toFixed(2);
+
+    // NEW: update progress bar width
+    const progressPercent = (currentDayOfYear / totalDays) * 100;
+    document.querySelector(".progress-line").style.width = progressPercent + "%";
 }
+
 
 // Run function when page loads
 document.addEventListener("DOMContentLoaded", updateProgressValues);
+
+document.getElementById("year").textContent = new Date().getFullYear();
