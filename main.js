@@ -7,17 +7,16 @@ const typingEffect = () => {
         if (index < text.length) {
             typingElement.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 100); // Typing speed
+            setTimeout(type, 100);
         } else {
             setTimeout(() => {
-                typingElement.textContent = ""; // Clear text
-                index = 0; // Reset index
-                type(); // Restart typing
-            }, 2000); // Delay before restarting
+                typingElement.textContent = "";
+                index = 0;
+                type();
+            }, 2000);
         }
     };
 
-    // Start the typing effect
     type();
 };
 
@@ -49,17 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
             } else {
-                entry.target.classList.remove("show"); // Remove class when out of view
+                entry.target.classList.remove("show");
             }
         });
-    }, { threshold: 0.1 }); // Trigger animation when 30% of the section is visible
+    }, { threshold: 0.1 });
 
     sections.forEach(section => {
         observer.observe(section);
     });
 });
 
-// Function to get current day of the year
 function getDayOfYear(date) {
     const startOfYear = new Date(date.getFullYear(), 0, 0);
     const diff = date - startOfYear;
@@ -67,36 +65,24 @@ function getDayOfYear(date) {
     return Math.floor(diff / oneDay);
 }
 
-// Function to check if it's a leap year
 function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
 
-// Function to update progress values dynamically
 function updateProgressValues() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-
-    // Get current day of the year
     const currentDayOfYear = getDayOfYear(currentDate);
-
-    // Get total days in the year (365 or 366 for leap years)
     const totalDays = isLeapYear(currentYear) ? 366 : 365;
-
-    // Calculate the negative countdown (e.g., -365, -364, ..., -1)
     const negativeCountdown = -(totalDays - currentDayOfYear);
 
-    // Update displayed values
     document.getElementById("current-day").innerText = currentDayOfYear.toFixed(2);
     document.getElementById("total-days").innerText = negativeCountdown.toFixed(2);
 
-    // NEW: update progress bar width
     const progressPercent = (currentDayOfYear / totalDays) * 100;
     document.querySelector(".progress-line").style.width = progressPercent + "%";
 }
 
-
-// Run function when page loads
 document.addEventListener("DOMContentLoaded", updateProgressValues);
 
 document.getElementById("year").textContent = new Date().getFullYear();
